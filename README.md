@@ -2,15 +2,17 @@
 Plussa- ja WETO-järjestelmien automaattitarkistukseen liittyviä paketteja ja dokumentaatiota.
 Tämä on tarkoitus rakentaa Plussan [apluslms/course-templates](https://github.com/apluslms/course-templates)
 kurssipohjan päälle, jos vaikka tämä haluttaisiin laittaa tulevaisuudessa Plussaan saataville.
-Toisaalta tämämahdollistaa myös Plussamuotoisten tehtävien toiminnan tarkistamisen paikallisesti.
+Toisaalta Plussan kurssipohjan päälle rakentaminen mahdollistaa myös Plussamuotoisten
+tehtävien toiminnan tarkistamisen paikallisesti.
+Alla on lyhyesti sekä Plussan, että WETOn käyttöönottoon liittyvää dokumentaatiota.
 
-## A course template for A-plus learning environment
+## Plussa: A course template for A-plus learning environment
 
 This is a codebase which teaches how to make a new course on
 [A+ e-learning system](https://github.com/Aalto-LeTech/a-plus>).
 A+ is currently used on many computer science courses on Aalto University.
 
-## Installation
+### Installation
 
 This tutorial is tested with Aalto Ubuntu Linux environment and it probably works
 on any Unix / Linux / Mac environment. It is assumed that you already have
@@ -51,7 +53,7 @@ completed.
 For persistent A+ database and other storage, uncomment volume entries like
 `./_data:...` in the `docker-compose.yml`.
 
-## Developing new assessment environments as containers
+### Developing new assessment environments as containers
 
 The exercise config can name any container in https://hub.docker.com/. We have
 published few containers that support assessment for different environments at
@@ -66,3 +68,17 @@ convenience commands to capture feedback output from any programs and register
 the result at end. Either build your custom container on hierarchy from our
 base container or implement the HTTP POST interface yourself. Different
 Dockerfiles and included scripts are a good reference.
+
+## WETO
+
+### Accessing the service
+
+The WETO system is currently hosted at two different addresses:
+
+1. https://wetodev.sis.uta.fi/
+2. https://weto.sis.uta.fi/
+
+The first of these is the WETO development server,
+which also hosts most of the active courses.
+At this point it is difficult to say what the second server is for,
+as all of the purposeful functionality seems to be active only on the first one.
